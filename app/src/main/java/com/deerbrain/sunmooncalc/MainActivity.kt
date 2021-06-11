@@ -14,6 +14,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun getDataPressed(){
+        val today = Now()
+        val smc: SunMoonCalculator = SunMoonCalculator(date: today, longitude: -34.2, latitude: -82.2)
 
+        smc.calcSunAndMoon()
+        // i can get all the data doing
+        val data1 = smc.sunTransit
+        val data2 = smc.moonDistance
+        //etc
     }
 }
